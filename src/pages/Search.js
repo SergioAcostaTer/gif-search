@@ -15,7 +15,7 @@ const Search = ({ any }) => {
     });
   }, [query]); //eslint-disable-line
 
-
+  window.scroll(0,0)
   
   // if (window.scrollY > 1500){
   //   getGifsList(query).then((newData) => {

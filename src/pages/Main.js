@@ -8,12 +8,13 @@ const Main = ({ any }) => {
   useEffect(() => {
     getTrending().then((data) => {
       setData(data.data);
+      console.log(data.data)
     });
   }, []); //eslint-disable-line
 
   return (
     <>
-      <SearchBar />
+      <SearchBar displayInfo={false}/>
 
       <List array={data} />
     </>
