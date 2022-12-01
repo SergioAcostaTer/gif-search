@@ -17,7 +17,9 @@
 }
 
 .nav .form {
-  width: 80%;
+  width: 60%;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .nav .form .input-container {
@@ -46,6 +48,10 @@
   cursor: pointer;
 }
 
+.nav .form:focus-within {
+  width: 80%;
+}
+
 .autocompleted-list {
   position: fixed;
   top: 48px;
@@ -57,7 +63,7 @@
 }
 
 .autocompleted-list li {
-  height: 40px;
+  height: 80px;
 }
 
 .autocompleted-list li .autocompleted-element {
@@ -70,14 +76,25 @@
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid rgba(128, 128, 128, 0.11);
-  padding-left: 20px;
   text-decoration: none;
   color: black;
   font-family: 'Roboto', sans-serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .autocompleted-list li .autocompleted-element .same-text {
   font-weight: 900;
+}
+
+.autocompleted-list li .autocompleted-element .autocompleted-text {
+  padding-left: 15px;
+}
+
+.autocompleted-list li .autocompleted-element .preview {
+  height: 80%;
+  padding-right: 15px;
 }
 
 .autocompleted-list li .autocompleted-element:hover {
