@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useId } from "react";
 import Image from "../Image/Image";
 import "./List.css";
+// import sample from "../../sources/sample.gif";
 
-const List = ({ array = [] }) => {
+const List = ({ array = [], children }) => {
+  
+  // const object = { id: useId(), images: { original: { url: sample } }, title: "Best cat🐱", trending_datetime : "2023" };
+  // const data = Array(25).fill(object)
+  // console.log(data)
   return (
     <>
       <div className="list">
@@ -15,6 +20,8 @@ const List = ({ array = [] }) => {
           />
         ))}
       </div>
+      {children}
+      
     </>
   );
 };

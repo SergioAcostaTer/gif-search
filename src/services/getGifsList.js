@@ -2,7 +2,7 @@ import { GIPHY_KEY } from "./keys";
 
 export async function getGifsList(
   query = "Panda",
-  limit = 50,
+  limit = 20,
   offset = 0,
   rating = "g",
   lang = "en"

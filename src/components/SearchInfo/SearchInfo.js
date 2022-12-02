@@ -8,7 +8,6 @@ const SearchInfo = ({ displayInfo = true }) => {
   const query = params.get("query") || "panda";
 
   const emojis = getEmojiFromText(query);
-  console.log(query);
   return (
     <>
       {displayInfo ? (

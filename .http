@@ -1,0 +1,4 @@
+GET https://newsapi.org/v2/top-headlines?country=us&apiKey=96913f07678e4f4c8dd609ecfeefcd2d
+
+
+# Authorization: Bearer AAAAAAAAAAAAAAAAAAAAAK%2FQjwEAAAAAUdqp71nkrKsVfGfgKfjLdx8VEio%3DOJtXFOHGM6DSt6yFY7KYuVc4YVz5PQ9RCpH0R4Qj7YRN45irDk

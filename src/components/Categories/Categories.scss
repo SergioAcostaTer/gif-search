@@ -1,0 +1,26 @@
+.category-list{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 40px;
+    gap: 7px;
+    padding: 0 7px 7px 7px;
+    .category-list-element{
+        list-style: none;
+        display: flex;
+        .category-list-element-a{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            background-color: #f3f3f3;
+            height: 100%;
+            width: 100%;
+            border-radius: 7px;
+            text-align: center;
+        }
+    }
+}

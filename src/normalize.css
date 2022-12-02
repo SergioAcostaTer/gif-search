@@ -360,3 +360,10 @@
 .noSelect:focus {
     outline: none !important;
 }
+/* .main, .search, .list{
+  animation: showIn .5s;
+} */
+
+body{
+  scroll-behavior: smooth;
+}

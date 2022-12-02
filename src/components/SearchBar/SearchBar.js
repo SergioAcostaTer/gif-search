@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { getAutocomplete } from "../../services/getAutocomplete";
 import searchIcon from "../../sources/search.svg";
 import arrowIcon from "../../sources/arrow-left.svg";
@@ -15,6 +15,13 @@ const SearchBar = ({ query, displayInfo }) => {
   const [showAuto, setShowAuto] = useState(false);
   const [actualInput, setActualInput] = useState("");
   const [toggleSearch, setToggleSearch] = useState(true);
+
+  const [params] = useSearchParams();
+  const queryRefresh = params.get("query") || "";
+
+  useEffect(() => {
+    input.current.value = queryRefresh;
+  }, []); //eslint-disable-line
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,7 +60,13 @@ const SearchBar = ({ query, displayInfo }) => {
                 setShowAuto(true);
                 setToggleSearch(false);
               }}
-              onBlur={() => setToggleSearch(true)}
+              onBlur={() => {
+                setTimeout(() => {
+                  setShowAuto(false);
+                  setToggleSearch(true);
+                  // input.current.focus()
+                }, 500);
+              }}
               placeholder="Buscar un gif"
               className="input"
               type={"text"}
@@ -65,17 +78,21 @@ const SearchBar = ({ query, displayInfo }) => {
                 <img src={searchIcon} alt="search button" />
               </button>
             ) : (
-              <button
+              <div
+                style={{ zIndex: 1000 }}
                 className="search-button noSelect"
-                onClick={() => console.log("lol?")}
+                onClick={() => {
+                  input.current.value = "";
+                  setActualInput("")
+                }}
               >
                 <img src={xIcon} alt="search button" />
-              </button>
+              </div>
             )}
           </div>
         </form>
       </nav>
-      <SearchInfo displayInfo={displayInfo}/>
+      <SearchInfo displayInfo={displayInfo} />
       {showAuto ? (
         <ul className="autocompleted-list">
           {autocomplete?.map((e, index) => (

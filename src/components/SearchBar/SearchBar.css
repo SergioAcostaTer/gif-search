@@ -1,4 +1,6 @@
 .nav {
+  -webkit-box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
+          box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
   height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,6 +17,7 @@
   top: 0;
   background-color: white;
   width: 100%;
+  border-bottom: 1px solid #F2F2F2;
 }
 
 .nav .back {
@@ -144,9 +147,12 @@
 
 .search-info {
   padding-left: 14px;
-  margin: 10px 0;
+  margin: 0;
+  padding: 10px 0 10px 0px;
   font-family: 'Roboto', sans-serif;
   color: #1f1f1f;
   font-size: 17px;
+  border-bottom: 1px solid #F2F2F2;
+  text-align: center;
 }
 /*# sourceMappingURL=SearchBar.css.map */

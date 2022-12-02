@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import List from "../components/List/List";
+import NavMobile from "../components/NavMobile/NavMobile";
 import SearchBar from "../components/SearchBar/SearchBar";
 import { getGifsList } from "../services/getGifsList";
 
@@ -12,11 +13,12 @@ const Search = ({ any }) => {
   useEffect(() => {
     getGifsList(query).then((data) => {
       setData(data.data);
+      // console.log(data)
     });
   }, [query]); //eslint-disable-line
 
-  window.scroll(0,0)
-  
+  window.scroll(0, 0);
+
   // if (window.scrollY > 1500){
   //   getGifsList(query).then((newData) => {
   //     setData([...data, newData]);
@@ -26,8 +28,12 @@ const Search = ({ any }) => {
 
   return (
     <>
-      <SearchBar />
-      <List array={data} />
+      <div className="search">
+        <SearchBar />
+        <List array={data}>
+          <NavMobile />
+        </List>
+      </div>
     </>
   );
 };

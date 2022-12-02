@@ -1,0 +1,37 @@
+.nav-mobile {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+
+    .nav-mobile-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        background-color: white;
+        height: 7vh;
+        box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
+        border-top: 1px solid #F2F2F2;
+
+        .nav-mobile-element {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding-top: 11px;
+
+            .nav-mobile-element-a {
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                // align-items: center;
+                display: flex;
+                text-decoration: none;
+                font-family: "Roboto", "Sheriff";
+                color: black;
+                font-size: 20px;
+            }
+        }
+    }
+}
