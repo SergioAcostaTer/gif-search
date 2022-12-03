@@ -1,4 +1,3 @@
-GET https://newsapi.org/v2/top-headlines?country=us&apiKey=96913f07678e4f4c8dd609ecfeefcd2d
+GET https://www.googleapis.com/oauth2/v1/userinfo
 
-
-# Authorization: Bearer AAAAAAAAAAAAAAAAAAAAAK%2FQjwEAAAAAUdqp71nkrKsVfGfgKfjLdx8VEio%3DOJtXFOHGM6DSt6yFY7KYuVc4YVz5PQ9RCpH0R4Qj7YRN45irDk
+Authorization: Bearer 475953175166-2qt9nb3h3gbk2rr3l93fih22ug5sbueg.apps.googleusercontent.com

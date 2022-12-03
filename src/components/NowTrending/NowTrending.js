@@ -4,6 +4,7 @@ import { getNowTrending } from "../../services/getNowTrending";
 import "./NowTrending.css";
 import getEmojiFromText from "../../services/getEmojiFromText";
 import Background from "../Background/Background";
+import clockwiseIcon from "../../sources/clockwise.svg"
 
 const NowTrending = ({ background = false }) => {
   const [topics, setTopics] = useState([]);
@@ -36,8 +37,9 @@ const NowTrending = ({ background = false }) => {
               <span>{time?.substring(11, 19)}</span>
               {getEmojiFromText("time clock")})
             </p>
-            <button onClick={handleRefresh}>
-              <p className={rotate}>{getEmojiFromText("repeat")}</p>
+            <button onClick={handleRefresh} className="noSelect">
+              {/* <p className={rotate}>{clockwiseIcon}</p> */}
+              <img className={`${rotate} noSelect`} src={clockwiseIcon}/>
             </button>
           </div>
         </div>

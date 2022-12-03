@@ -1,11 +1,10 @@
-import React, { useId } from "react";
+import React from "react";
 import Image from "../Image/Image";
 import "./List.css";
 // import sample from "../../sources/sample.gif";
 
 const List = ({ array = [], children }) => {
-  
-  // const object = { id: useId(), images: { original: { url: sample } }, title: "Best cat🐱", trending_datetime : "2023" };
+  // const object = { id: "xd"), images: { original: { url: sample } }, title: "Best cat🐱", trending_datetime : "2023" };
   // const data = Array(25).fill(object)
   // console.log(data)
   return (
@@ -21,7 +20,6 @@ const List = ({ array = [], children }) => {
         ))}
       </div>
       {children}
-      
     </>
   );
 };

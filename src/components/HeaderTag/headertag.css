@@ -1,0 +1,10 @@
+.header-tag{
+    height: 8vh;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
+    border-bottom: 1px solid #F2F2F2;
+}

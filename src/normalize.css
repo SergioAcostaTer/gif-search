@@ -31,6 +31,9 @@
   main {
     display: block;
   }
+  div{
+    box-sizing: border-box;
+  }
   
   /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -64,6 +67,11 @@
   pre {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
   
   /* Text-level semantics
@@ -366,4 +374,7 @@
 
 body{
   scroll-behavior: smooth;
+}
+#root{
+  min-height: 100vh;
 }

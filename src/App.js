@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 
 import "./normalize.css"
 import "./imports.css"
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path={"/"} element={<Main />}/>
         <Route path={"/search"} element={<Search />}/>
         <Route path={"/login"} element={<Login  />}/>
+        <Route path={"/profile"} element={<Profile  />}/>
       </Routes>
     </>
   );

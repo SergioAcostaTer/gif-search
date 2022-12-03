@@ -13,13 +13,13 @@ const Categories = ({ any }) => {
     <>
       <ul className="category-list">
         {data.map((category) => (
-          <li className="category-list-element">
+          <li className="category-list-element" key={category.name}>
             <Link
               className="category-list-element-a"
               to={`/search?query=${category.name}`}
             >
               {category.name}
-              {getEmojiFromText(category.name)}
+              {getEmojiFromText(category.name, true)}
             </Link>
           </li>
         ))}

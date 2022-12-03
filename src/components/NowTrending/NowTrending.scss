@@ -28,8 +28,15 @@
             height: 20px;
             border: none;
             cursor: pointer;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             // height: 15px;
             // width: 15px;
+            img{
+                height: 100%;
+            }
         }
     }
     
