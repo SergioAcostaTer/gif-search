@@ -10,7 +10,7 @@
         display: flex;
         width: 100%;
         background-color: white;
-        height: 7vh;
+        height: 65px;
         box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
         // border-top: 1px solid #F2F2F2;
         border-top: 1px solid #889397;
@@ -28,14 +28,25 @@
                 width: 100%;
                 height: 100%;
                 justify-content: center;
-                // align-items: center;
-                display: flex;
+                text-align: center;
                 text-decoration: none;
                 font-family: "Roboto", "Sheriff";
                 color: black;
                 justify-content: center;
                 align-items: center;
-                font-size: 20px;
+                font-size: 15px;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: center;
+                    p{
+                        margin: 0;
+                    }
+                    img{
+                        height: 30px;
+                    }
+                }
 
             }
         }

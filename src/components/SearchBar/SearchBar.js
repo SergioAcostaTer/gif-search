@@ -8,7 +8,7 @@ import Preview from "../Preview/Preview";
 import "./SearchBar.css";
 import SearchInfo from "../SearchInfo/SearchInfo";
 
-const SearchBar = ({ query, displayInfo }) => {
+const SearchBar = ({ displayInfo }) => {
   const input = useRef(null);
   const navigate = useNavigate();
   const [autocomplete, setAutocomplete] = useState();

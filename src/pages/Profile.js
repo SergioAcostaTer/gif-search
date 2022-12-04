@@ -4,6 +4,7 @@ import ButtonProfile from "../components/ButtonProfile/ButtonProfile";
 import HeaderTag from "../components/HeaderTag/HeaderTag";
 import forbiddenIcon from "../sources/forbidden.svg";
 import starIcon from "../sources/star.svg";
+import bookmarkIcon from "../sources/bookmark.svg";
 
 import GlobalContext from "../context/GlobalContext";
 import NavMobile from "../components/NavMobile/NavMobile";
@@ -40,30 +41,49 @@ const Profile = ({ any }) => {
   const favourites = () => {
     navigate("/favourites");
   };
+  const saved = () => {
+    navigate("/saved");
+  };
 
   return (
     <>
-      <HeaderTag tag={"Profile"} back={-1}/>
+      <HeaderTag tag={"Profile"} back={-1} />
       <Avatar
         name={realUser.name}
         email={realUser.email}
         pic={realUser.picture}
       />
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "100%",
+          position: "relative",
+        }}
+      >
+        <div>
+          <ButtonProfile
+            text={"Favourites"}
+            img={starIcon}
+            className={"favs"}
+            func={favourites}
+          />
+          <FavouritesPreview token={localStorage.token} />
+        </div>
         <ButtonProfile
-          text={"Favourites"}
-          img={starIcon}
-          className={"favs"}
-          func={favourites}
+          text={"Saved GIFs"}
+          img={bookmarkIcon}
+          className={"saved"}
+          func={saved}
         />
-        <FavouritesPreview token={localStorage.token}/>
+        <ButtonProfile
+          text={"Log out of the account"}
+          img={forbiddenIcon}
+          className={"log-out"}
+          func={logOut}
+        />
       </div>
-      <ButtonProfile
-        text={"Log out of the account"}
-        img={forbiddenIcon}
-        className={"log-out"}
-        func={logOut}
-      />
       <NavMobile position="fixed" />
     </>
   );

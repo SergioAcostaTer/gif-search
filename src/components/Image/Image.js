@@ -16,7 +16,7 @@ const Image = ({ uri, alt, date, save }) => {
     if (localStorage.token) {
       checkFavourite(localStorage.token, save.id).then((res) => {
         setHeartMode(res.exist);
-        console.log(res, save);
+        // console.log(res, save);
       });
     }
     // console.log(localStorage.token, save.id, heartMode)

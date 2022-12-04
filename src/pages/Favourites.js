@@ -3,22 +3,27 @@ import { Link } from "react-router-dom";
 import HeaderTag from "../components/HeaderTag/HeaderTag";
 import NavMobile from "../components/NavMobile/NavMobile";
 import getFavourites from "../services/getFavourites";
+import loadingIcon from "../sources/loading.gif"
 
 import "./styles/Favourites.css";
 
 const Favourites = ({ any }) => {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     document.title = 'Favourites⭐';  
     getFavourites(localStorage.token).then((data) => setData(data));
+    setIsLoading(false)
   }, []); //eslint-disable-line
 
   return (
     <>
       <HeaderTag tag={"Favourites"} />
       <NavMobile position="fixed" />
-      <ul className="fav-list">
+      {
+        !isLoading ? 
+        <ul className="fav-list">
         {data.map((gif) => (
           <li key={gif.id}>
             <Link to={`/details/${gif.id}`}>
@@ -27,6 +32,9 @@ const Favourites = ({ any }) => {
           </li>
         ))}
       </ul>
+      :
+      <img src={loadingIcon} alt={"loading"}/>
+      }
     </>
   );
 };

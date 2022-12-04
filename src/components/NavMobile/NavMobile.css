@@ -14,7 +14,7 @@
   display: flex;
   width: 100%;
   background-color: white;
-  height: 7vh;
+  height: 65px;
   -webkit-box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
           box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
   border-top: 1px solid #889397;
@@ -40,9 +40,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
   text-decoration: none;
   font-family: "Roboto", "Sheriff";
   color: black;
@@ -50,6 +48,28 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.nav-mobile .nav-mobile-list .nav-mobile-element .nav-mobile-element-a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-mobile .nav-mobile-list .nav-mobile-element .nav-mobile-element-a div p {
+  margin: 0;
+}
+
+.nav-mobile .nav-mobile-list .nav-mobile-element .nav-mobile-element-a div img {
+  height: 30px;
 }
 /*# sourceMappingURL=NavMobile.css.map */

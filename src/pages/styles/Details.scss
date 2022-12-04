@@ -1,4 +1,6 @@
 .post {
+    display: flex;
+    flex-direction: column;
     .post-title {
         height: 66px;
         display: flex;
@@ -25,32 +27,27 @@
     .post-pic {
         width: 100%;
     }
+    .post-lowbar{
+        height: 50px;
+        padding-left: 10px;
+        border: 1px solid #889397a2;
+        margin: 0;
+    }
 }
 
-.like{
+.like {
+    margin: 0;
     z-Index: 50;
     cursor: pointer;
-    height:42px;
+    height: 100%;
     width: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
     outline: none;
     border: 0;
     transition: .3s;
-}
-.like img{
-    width: 80%;
-}
-.like{
     background-color: transparent;
-    svg{
+
+    svg {
         height: 100%;
         width: 100%;
-        // fill: red;
     }
-}
-.like:hover{
-    background-color: transparent;
 }

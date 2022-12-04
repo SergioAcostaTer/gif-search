@@ -3,7 +3,7 @@
     flex-direction: row;
     height: 52px;
     align-items: center;
-    margin: 14px;
+    margin: 6px 14px;
     background-color: white;
     width: calc(100% - 14px *2 );
     border-radius: 6px;
@@ -24,6 +24,6 @@
     }
 }
 
-.button-profile + .button-profile{
-    margin: 5px;
-}
+// .button-profile + .button-profile{
+//     margin: 0px 14px;
+// }

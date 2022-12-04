@@ -4,29 +4,30 @@ import { getNowTrending } from "../../services/getNowTrending";
 import "./NowTrending.css";
 import getEmojiFromText from "../../services/getEmojiFromText";
 import Background from "../Background/Background";
-import clockwiseIcon from "../../sources/clockwise.svg"
+// import clockwiseIcon from "../../sources/clockwise.svg"
 
 const NowTrending = ({ background = false }) => {
   const [topics, setTopics] = useState([]);
-  const [time, setTime] = useState("");
+  // const [time, setTime] = useState("");
   const [rotate, setRotate] = useState("");
   const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
     getNowTrending().then((data) => setTopics(data.splice(0, 6)));
-    setTime(new Date().toISOString());
+    // setTime(new Date().toISOString());
     setIsloading(false);
     setTimeout(() => setRotate(""), 2000);
   }, [rotate]);
 
-  function handleRefresh() {
-    setRotate("rotate");
-  }
+  // function handleRefresh() {
+  //   setRotate("rotate");
+  // }
 
   return (
     <>
       <div className="trending">
-        <div>
+
+        {/* <div>
           <h2 className="trending-title">
             Trending Topics{getEmojiFromText("trend fire")}
           </h2>
@@ -38,11 +39,11 @@ const NowTrending = ({ background = false }) => {
               {getEmojiFromText("time clock")})
             </p>
             <button onClick={handleRefresh} className="noSelect">
-              {/* <p className={rotate}>{clockwiseIcon}</p> */}
               <img className={`${rotate} noSelect`} src={clockwiseIcon} alt={"clockwise arrow"}/>
             </button>
           </div>
-        </div>
+        </div> */}
+        
         {!isLoading ? (
           <ul className="trending-list">
             {topics?.map((topic) => (
