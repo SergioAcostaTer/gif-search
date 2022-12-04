@@ -1,0 +1,40 @@
+.button-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 52px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 14px;
+  background-color: white;
+  width: calc(100% - 14px *2);
+  border-radius: 6px;
+  -webkit-box-shadow: #989898 0px 1px;
+          box-shadow: #989898 0px 1px;
+  cursor: pointer;
+  border: 1px solid #889397;
+}
+
+.button-profile img {
+  height: 68%;
+  padding-left: 10px;
+}
+
+.button-profile p {
+  padding-left: 10px;
+  font-size: 23px;
+  margin: 0;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.button-profile + .button-profile {
+  margin: 5px;
+}
+/*# sourceMappingURL=ButtonProfile.css.map */

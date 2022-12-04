@@ -376,5 +376,6 @@ body{
   scroll-behavior: smooth;
 }
 #root{
+  position: relative;
   min-height: 100vh;
 }

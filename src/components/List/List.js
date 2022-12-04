@@ -12,6 +12,7 @@ const List = ({ array = [], children }) => {
       <div className="list">
         {array.map((gif) => (
           <Image
+            save={gif}
             uri={gif?.images.original.url}
             key={gif?.id}
             alt={gif?.title}

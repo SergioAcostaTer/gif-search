@@ -1,11 +1,18 @@
 import React from "react";
 import "./headertag.css";
+import { useNavigate } from "react-router-dom";
+import arrowIcon from "../../sources/arrow-left.svg"
 
-const HeaderTag = ({ tag }) => {
+const HeaderTag = ({ tag, back = -1}) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="header-tag">
-        <h1>{tag}</h1>
+        <button className="button-back noSelect" onClick={() => navigate(back)}>
+          <img src={arrowIcon} alt={"back button"}/>
+        </button>
+        <h1 className="header-title">{tag}</h1>
       </div>
     </>
   );

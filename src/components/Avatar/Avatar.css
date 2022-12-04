@@ -8,6 +8,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 254px;
 }
 
 .avatar-container .avatar-pic {
@@ -16,9 +17,11 @@
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 50%;
-  border: 10px solid white;
+  border: 8px solid white;
   z-index: 200;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .avatar-container .avatar-box {
@@ -32,7 +35,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #d8d8d8;
+  background-color: #e0e0e0;
   padding-top: 45px;
   -webkit-transform: translateY(-65px);
           transform: translateY(-65px);
@@ -40,6 +43,9 @@
   margin: 0 15px;
   overflow: hidden;
   border-radius: 22px;
+  -webkit-box-shadow: #989898 0px 1px;
+          box-shadow: #989898 0px 1px;
+  border: 1px solid #889397;
 }
 
 .avatar-container .avatar-box .avatar-text {

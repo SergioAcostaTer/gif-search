@@ -3,6 +3,7 @@
   position: sticky;
   bottom: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .nav-mobile .nav-mobile-list {
@@ -16,7 +17,7 @@
   height: 7vh;
   -webkit-box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
           box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
-  border-top: 1px solid #F2F2F2;
+  border-top: 1px solid #889397;
 }
 
 .nav-mobile .nav-mobile-list .nav-mobile-element {
@@ -31,7 +32,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 11px;
 }
 
 .nav-mobile .nav-mobile-list .nav-mobile-element .nav-mobile-element-a {
@@ -46,6 +46,10 @@
   text-decoration: none;
   font-family: "Roboto", "Sheriff";
   color: black;
+  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 20px;
 }
 /*# sourceMappingURL=NavMobile.css.map */

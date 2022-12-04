@@ -1,13 +1,12 @@
 import React from "react";
 import "./Avatar.css"
 import defaultAavatarPic from "../../sources/defaultAvatar.png"
-
+  
 const Avatar = ({ pic, name, email }) => {
-  console.log(pic, name, email);
   return (
     <>
       <div className="avatar-container">
-      <img className="avatar-pic" src={pic ? pic : defaultAavatarPic} alt={name} />
+      <img className="avatar-pic" referrerPolicy="no-referrer" src={pic ? pic : defaultAavatarPic} alt={name} />
 
         <div className="avatar-box">
             <div className="avatar-text">

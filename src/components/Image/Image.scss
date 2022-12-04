@@ -54,7 +54,7 @@
     }
 
     .buttons {
-        animation: showIn .5s;
+        animation: showIn .3s;
     
         display: flex;
         position: absolute;
@@ -80,8 +80,33 @@
         button img{
             width: 80%;
         }
-        button:hover{
+        button:active{
             background-color: rgb(184, 184, 184);
+        }
+        .download{
+            background-color: #7247ff;
+            // background-color: #ce3aec;
+            img{
+                color: white;
+            }
+        }
+        .download:hover{
+            background-color: #461fc6;
+            // background-color: #ce3aec;
+        }
+        .link{
+            background-color: #fff;
+        }
+        .like{
+            background-color: transparent;
+            svg{
+                height: 100%;
+                width: 100%;
+                // fill: red;
+            }
+        }
+        .like:hover{
+            background-color: transparent;
         }
 
     }

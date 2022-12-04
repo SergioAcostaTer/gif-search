@@ -11,6 +11,10 @@ const Search = ({ any }) => {
   const query = params.get("query") || "panda";
 
   useEffect(() => {
+    document.title = 'Search Gif🔎🖼️';
+  }, []);
+
+  useEffect(() => {
     getGifsList(query).then((data) => {
       setData(data.data);
       // console.log(data)

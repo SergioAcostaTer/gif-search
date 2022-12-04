@@ -1,3 +1,4 @@
+
 import { GIPHY_KEY } from "./keys";
 
 export async function getCategories() {

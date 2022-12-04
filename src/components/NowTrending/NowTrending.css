@@ -1,5 +1,5 @@
 .trending .trending-title {
-  font-family: "Roboto", "Sheriff";
+  font-family: "Roboto", sans-serif;
   text-align: center;
   margin: 15px 0 5px 0;
 }
@@ -22,7 +22,7 @@
 }
 
 .trending .trending-refresh p {
-  font-family: "Roboto", "Sheriff";
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -58,7 +58,7 @@
   -ms-grid-rows: (31.5%)[auto-fill];
       grid-template-rows: repeat(auto-fill, 31.5%);
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   gap: 7px;
 }
 
@@ -88,7 +88,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 19px;
-  font-family: "Roboto", "Sheriff";
+  font-family: "Roboto", sans-serif;
   -webkit-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }

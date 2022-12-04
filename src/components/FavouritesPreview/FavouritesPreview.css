@@ -1,0 +1,16 @@
+.fav-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(80px, 1fr));
+  width: 100%;
+  grid-auto-rows: 90px;
+}
+
+.fav-cont img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=FavouritesPreview.css.map */

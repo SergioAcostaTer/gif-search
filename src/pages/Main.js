@@ -3,10 +3,14 @@ import NowTrending from "../components/NowTrending/NowTrending";
 import List from "../components/List/List";
 import SearchBar from "../components/SearchBar/SearchBar";
 import { getTrending } from "../services/getTrending";
-import Categories from "../components/Categories/Categories";
+// import Categories from "../components/Categories/Categories";
 import NavMobile from "../components/NavMobile/NavMobile";
 const Main = ({ any }) => {
   const [data, setData] = useState([]);
+
+  useEffect(() => {
+    document.title = 'easyGif | A easy gif finder.';
+  }, []);
 
   useEffect(() => {
     getTrending().then((data) => {
@@ -20,7 +24,7 @@ const Main = ({ any }) => {
       <div className="main">
         <SearchBar displayInfo={false} />
         <NowTrending background={true}/>
-        <Categories />
+        {/* <Categories /> */}
         {/* <List array={data} /> */}
         <List array={data}>
           <NavMobile  />

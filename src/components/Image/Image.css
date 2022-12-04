@@ -52,8 +52,8 @@
 }
 
 .image-container .buttons {
-  -webkit-animation: showIn .5s;
-          animation: showIn .5s;
+  -webkit-animation: showIn .3s;
+          animation: showIn .3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,8 +92,37 @@
   width: 80%;
 }
 
-.image-container .buttons button:hover {
+.image-container .buttons button:active {
   background-color: #b8b8b8;
+}
+
+.image-container .buttons .download {
+  background-color: #7247ff;
+}
+
+.image-container .buttons .download img {
+  color: white;
+}
+
+.image-container .buttons .download:hover {
+  background-color: #461fc6;
+}
+
+.image-container .buttons .link {
+  background-color: #fff;
+}
+
+.image-container .buttons .like {
+  background-color: transparent;
+}
+
+.image-container .buttons .like svg {
+  height: 100%;
+  width: 100%;
+}
+
+.image-container .buttons .like:hover {
+  background-color: transparent;
 }
 
 @-webkit-keyframes showIn {

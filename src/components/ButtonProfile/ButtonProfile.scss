@@ -1,0 +1,29 @@
+.button-profile{
+    display: flex;
+    flex-direction: row;
+    height: 52px;
+    align-items: center;
+    margin: 14px;
+    background-color: white;
+    width: calc(100% - 14px *2 );
+    border-radius: 6px;
+    box-shadow: rgb(152, 152, 152) 0px 1px;
+    cursor: pointer;
+    border: 1px solid rgb(136, 147, 151);
+    img{
+        height: 68%;
+        padding-left: 10px;
+    }
+    p{
+        padding-left: 10px;
+        font-size: 23px;
+        margin: 0;
+        color: 	black;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+}
+
+.button-profile + .button-profile{
+    margin: 5px;
+}

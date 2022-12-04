@@ -2,11 +2,13 @@ import { Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
 import Search from "./pages/Search";
 import Login from "./pages/Login";
-
+import Profile from "./pages/Profile";
+import Favourites from "./pages/Favourites";
 
 import "./normalize.css"
 import "./imports.css"
-import Profile from "./pages/Profile";
+import Details from "./pages/Details";
+
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path={"/search"} element={<Search />}/>
         <Route path={"/login"} element={<Login  />}/>
         <Route path={"/profile"} element={<Profile  />}/>
+        <Route path={"/favourites"} element={<Favourites  />}/>
+        <Route path={"/details/:id"} element={<Details  />}/>
       </Routes>
     </>
   );

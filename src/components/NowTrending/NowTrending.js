@@ -39,7 +39,7 @@ const NowTrending = ({ background = false }) => {
             </p>
             <button onClick={handleRefresh} className="noSelect">
               {/* <p className={rotate}>{clockwiseIcon}</p> */}
-              <img className={`${rotate} noSelect`} src={clockwiseIcon}/>
+              <img className={`${rotate} noSelect`} src={clockwiseIcon} alt={"clockwise arrow"}/>
             </button>
           </div>
         </div>

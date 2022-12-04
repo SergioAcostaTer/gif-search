@@ -4,28 +4,33 @@
     text-align: center;
     align-items: center;
     flex-direction: column;
+    height: 254px;
 
     .avatar-pic {
         height: 120px;
         width: 120px;
         object-fit: contain;
         border-radius: 50%;
-        border: 10px solid white;
+        border: 8px solid rgb(255, 255, 255);
         z-index: 200;
         position: relative;
+        margin: 0;
+        padding: 0;
     }
 
     .avatar-box {
         display: flex;
         align-items: center;
         flex-direction: column;
-        background-color: #d8d8d8;
+        background-color: #e0e0e0;
         padding-top: 45px;
         transform: translateY(-65px);
         z-index: 0;
         margin: 0 15px;
         overflow: hidden;
         border-radius: 22px;
+        box-shadow: #989898 0px 1px;
+        border: 1px solid #889397;
 
         .avatar-text {
             font-family: 'Roboto', sans-serif;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import sampleGif from "../../sources/sample.gif";
+import sampleGif from "../../sources/charge.png";
 import "../NowTrending/NowTrending.css";
 import { getPreview } from "../../services/getPreview";
 

@@ -1,5 +1,6 @@
 import React from "react";
 import "./LoginBox.css";
+import googleIcon from "../../sources/google.png"
 
 const LoginBox = ({ children }) => {
   return (
@@ -10,7 +11,7 @@ const LoginBox = ({ children }) => {
           <img
             className="login-logo"
             alt="google"
-            src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
+            src={googleIcon}
           />
           <h2 className="login-subtitle">To continue, log in with Google</h2>
           {children}
