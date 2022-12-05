@@ -9,17 +9,24 @@ const Background = ({ topic }) => {
 
   useEffect(() => {
     getPreview(topic)
-      .then((image) => setSrc(image.data[0]?.images?.preview_gif?.url))
+      .then((image) => setSrc(image.data[0]?.images?.original?.mp4))
       .then(() => setIsLoading(false));
   }, [topic]);
 
   return (
     <>
       {!loading ? (
-        <img className="trending-background" src={src} alt={topic} />
+        <video
+          rel="preconnect"
+          autoPlay
+          loop
+          muted
+          className="trending-background"
+        >
+          <source src={src} alt={topic} type="video/mp4" />
+        </video>
       ) : (
         <img className="trending-background" src={sampleGif} alt={"best cat"} />
-
       )}
     </>
   );

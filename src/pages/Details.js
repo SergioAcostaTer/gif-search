@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import HeaderTag from "../components/HeaderTag/HeaderTag";
 import getGifById from "../services/getGifById";
 import defaultAvatar from "../sources/defaultAvatar.png";
@@ -14,8 +14,12 @@ const Details = ({ any }) => {
   const { id } = useParams();
   const [data, setData] = useState();
   const [heartMode, setHeartMode] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
+    if (!localStorage.user) {
+      navigate("/login");
+    }
     if (localStorage.token) {
       checkFavourite(localStorage.token, id).then((res) => {
         setHeartMode(res.exist);

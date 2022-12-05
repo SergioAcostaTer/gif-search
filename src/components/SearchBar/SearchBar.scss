@@ -26,13 +26,16 @@
         background-color: transparent;
         animation: showIn .3s;
         cursor: pointer;
+
         img {
             height: 100%;
         }
     }
-    .back:active{
+
+    .back:active {
         background-color: #F2F2F2;
     }
+
     // .form:focus-within > .back{
     //     display: none;
     // }
@@ -65,6 +68,11 @@
                 border: 0;
                 width: 50px;
                 cursor: pointer;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
     }
@@ -120,7 +128,7 @@
     }
 }
 
-.search-info{
+.search-info {
     padding-left: 14px;
     margin: 0;
     padding: 10px 0 10px 0px;

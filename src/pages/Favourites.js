@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HeaderTag from "../components/HeaderTag/HeaderTag";
 import NavMobile from "../components/NavMobile/NavMobile";
 import getFavourites from "../services/getFavourites";
@@ -11,8 +11,13 @@ const Favourites = ({ any }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const navigate = useNavigate()
+
   useEffect(() => {
-    document.title = 'Favourites⭐';  
+    document.title = 'Favourites⭐';
+    if (!localStorage.user) {
+      navigate("/login");
+    } 
     getFavourites(localStorage.token).then((data) => setData(data));
     setIsLoading(false)
   }, []); //eslint-disable-line

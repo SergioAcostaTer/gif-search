@@ -6,14 +6,14 @@ import "./List.css";
 const List = ({ array = [], children }) => {
   // const object = { id: "xd"), images: { original: { url: sample } }, title: "Best cat🐱", trending_datetime : "2023" };
   // const data = Array(25).fill(object)
-  // console.log(data)
+  // console.log(array)
   return (
     <>
       <div className="list">
         {array.map((gif) => (
           <Image
             save={gif}
-            uri={gif?.images.original.url}
+            uri={gif?.images.original.mp4}
             key={gif?.id}
             alt={gif?.title}
             date={gif?.trending_datetime}

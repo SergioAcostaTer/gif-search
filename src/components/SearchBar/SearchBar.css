@@ -92,6 +92,11 @@
   cursor: pointer;
 }
 
+.nav .form .input-container .search-button img {
+  width: 16px;
+  height: 16px;
+}
+
 .nav .form:focus-within {
   width: 80%;
 }

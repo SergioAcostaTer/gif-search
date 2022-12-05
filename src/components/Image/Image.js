@@ -36,10 +36,10 @@ const Image = ({ uri, alt, date, save }) => {
                   //create new a element
                   let a = document.createElement("a");
                   // get image as blob
-                  let response = await fetch(uri);
+                  let response = await fetch(save.images?.original?.url);
                   let file = await response.blob();
                   // use download attribute https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Attributes
-                  a.download = `${alt}`;
+                  a.download = `${alt.split("by")[0]}`;
                   a.href = window.URL.createObjectURL(file);
                   //store download url in javascript https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes#JavaScript_access
                   a.dataset.downloadurl = [
@@ -132,7 +132,9 @@ const Image = ({ uri, alt, date, save }) => {
           onClick={() => setShowOptions(!showOptions)}
           /*onMouseOver={() => setShowOptions(true)} onMouseLeave={() => setShowOptions(false)}*/ className="clickable"
         >
-          <img className="image" src={uri} alt={alt} />
+          <video autoPlay loop muted className="image">
+            <source src={uri} alt={alt} type="video/mp4" />
+          </video>
 
           {showOptions ? (
             <div className="image-options">

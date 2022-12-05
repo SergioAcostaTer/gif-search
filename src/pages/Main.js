@@ -13,7 +13,7 @@ const Main = ({ any }) => {
   }, []);
 
   useEffect(() => {
-    getTrending().then((data) => {
+    getTrending(5).then((data) => {
       setData(data.data);
       // console.log(data.data)
     });
