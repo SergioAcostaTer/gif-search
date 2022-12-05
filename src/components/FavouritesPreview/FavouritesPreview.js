@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import getFavourites from "../../services/getFavourites";
+import Video from "../Video/Video";
 import "./FavouritesPreview.css";
 
 const FavouritesPreview = ({ token }) => {
@@ -16,9 +17,14 @@ const FavouritesPreview = ({ token }) => {
         <div className="fav-cont">
           {data
             ? data.map((element) => (
-                <img
-                  key={element.id}
-                  src={element?.images.original.url}
+                // <img
+                //   key={element.id}
+                //   src={element?.images.original.url}
+                //   alt={element?.title}
+                // />
+                <Video
+                  id={element?.id}
+                  src={element?.images?.preview?.mp4}
                   alt={element?.title}
                 />
               ))

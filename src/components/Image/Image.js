@@ -9,6 +9,8 @@ import ButtonProfile from "../ButtonProfile/ButtonProfile";
 import detailsIcon from "../../sources/details.svg";
 import { useNavigate } from "react-router-dom";
 import DownloadButton from "../DownloadButton/DownloadButton";
+import Video from "../Video/Video";
+
 
 const Image = ({ uri, alt, date, save }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -128,9 +130,8 @@ const Image = ({ uri, alt, date, save }) => {
           onClick={() => setShowOptions(!showOptions)}
           /*onMouseOver={() => setShowOptions(true)} onMouseLeave={() => setShowOptions(false)}*/ className="clickable"
         >
-          <video autoPlay loop muted className="image">
-            <source src={uri} alt={alt} type="video/mp4" />
-          </video>
+    
+          <Video src={uri} alt={alt} className="image"/>
 
           {showOptions ? (
             <div className="image-options">

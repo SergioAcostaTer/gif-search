@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import sampleGif from "../../sources/charge.png";
 import "../NowTrending/NowTrending.css";
 import { getPreview } from "../../services/getPreview";
+import Video from "../Video/Video";
 
 const Background = ({ topic }) => {
   const [src, setSrc] = useState();
@@ -16,15 +17,12 @@ const Background = ({ topic }) => {
   return (
     <>
       {!loading ? (
-        <video
+        <Video
+          src={src}
+          alt={topic}
           rel="preconnect"
-          autoPlay
-          loop
-          muted
           className="trending-background"
-        >
-          <source src={src} alt={topic} type="video/mp4" />
-        </video>
+        />
       ) : (
         <img className="trending-background" src={sampleGif} alt={"best cat"} />
       )}
