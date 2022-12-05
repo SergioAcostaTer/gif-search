@@ -5,11 +5,11 @@ const ButtonProfile = ({ text, img, className, func }) => {
   return (
     <>
       <button
-        className="button-profile"
         onClick={func}
+        className={`${className} button-profile`}
       >
         <img src={img} alt={text} />
-        <p className={className}>{text}</p>
+        <p>{text}</p>
       </button>
     </>
   );

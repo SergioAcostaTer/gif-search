@@ -43,9 +43,15 @@
 
 .post .post-lowbar {
   height: 50px;
-  padding-left: 10px;
+  padding: 0 15px;
   border: 1px solid #889397a2;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .like {
@@ -62,6 +68,25 @@
 }
 
 .like svg {
+  height: 100%;
+  width: 100%;
+}
+
+.download-details {
+  margin: 0;
+  z-Index: 50;
+  cursor: pointer;
+  height: 100%;
+  width: 42px;
+  outline: none;
+  border: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background-color: transparent;
+  margin-right: 7px;
+}
+
+.download-details img {
   height: 100%;
   width: 100%;
 }

@@ -9,7 +9,7 @@ const Background = ({ topic }) => {
 
   useEffect(() => {
     getPreview(topic)
-      .then((image) => setSrc(image.data[0]?.images?.original?.mp4))
+      .then((image) => setSrc(image.data[0]?.images?.preview?.mp4))
       .then(() => setIsLoading(false));
   }, [topic]);
 

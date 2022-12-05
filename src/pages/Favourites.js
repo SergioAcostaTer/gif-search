@@ -32,7 +32,7 @@ const Favourites = ({ any }) => {
         <ul className="fav-list">
           {data.map((gif) => (
             <li key={gif.id}>
-              <Link to={`/details/${gif.id}`}>
+              <Link to={`/post/${gif.id}`}>
                 {/* <img src={gif?.images.original.url} alt={gif?.title} /> */}
                 <video autoPlay loop muted className="image">
                   <source

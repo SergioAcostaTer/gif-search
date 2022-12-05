@@ -6,6 +6,17 @@
   overflow: hidden;
 }
 
+.image-container .image-button {
+  position: absolute;
+  bottom: 0;
+  z-index: 30;
+  margin-bottom: 18px;
+}
+
+.image-container .image-button p {
+  padding-left: 25px;
+}
+
 .image-container .image-options {
   position: absolute;
   width: 100%;

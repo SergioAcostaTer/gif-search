@@ -63,7 +63,7 @@ const Profile = ({ any }) => {
         }}
       >
         <div>
-          <ButtonProfile
+        <ButtonProfile
             text={"Favourites"}
             img={starIcon}
             className={"favs"}

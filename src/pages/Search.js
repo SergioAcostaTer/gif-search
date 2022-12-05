@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import List from "../components/List/List";
 import NavMobile from "../components/NavMobile/NavMobile";
 import SearchBar from "../components/SearchBar/SearchBar";
+// import HeaderTag from "../components/HeaderTag/HeaderTag";
 import { getGifsList } from "../services/getGifsList";
 
 const Search = ({ any }) => {
@@ -32,6 +33,7 @@ const Search = ({ any }) => {
 
   return (
     <>
+      {/* <HeaderTag tag={"Search"}/> */}
       <div className="search">
         <SearchBar />
         <List array={data}>

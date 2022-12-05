@@ -13,7 +13,7 @@ const List = ({ array = [], children }) => {
         {array.map((gif) => (
           <Image
             save={gif}
-            uri={gif?.images.original.mp4}
+            uri={gif?.images?.preview.mp4}
             key={gif?.id}
             alt={gif?.title}
             date={gif?.trending_datetime}

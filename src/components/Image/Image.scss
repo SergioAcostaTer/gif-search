@@ -4,6 +4,15 @@
     display: inline-block;
     cursor: pointer;
     overflow: hidden;
+    .image-button{
+        position: absolute;
+        bottom: 0;
+        z-index: 30;
+        margin-bottom: 18px;
+        p{
+            padding-left: 25px;
+        }
+    }
 
     .image-options {
         position: absolute;

@@ -26,7 +26,6 @@ const NowTrending = ({ background = false }) => {
   return (
     <>
       <div className="trending">
-
         {/* <div>
           <h2 className="trending-title">
             Trending Topics{getEmojiFromText("trend fire")}
@@ -43,7 +42,7 @@ const NowTrending = ({ background = false }) => {
             </button>
           </div>
         </div> */}
-        
+
         {!isLoading ? (
           <ul className="trending-list">
             {topics?.map((topic) => (
@@ -51,11 +50,16 @@ const NowTrending = ({ background = false }) => {
                 <Link
                   className="trending-element-a"
                   to={`/search?query=${topic}`}
-                  style={{backgroundColor: background ? "transparent" : "", color: background ? "white" : ""}}
+                  style={{
+                    backgroundColor: background ? "transparent" : "",
+                    color: background ? "white" : "",
+                  }}
                 >
-                  {topic}
-                  {getEmojiFromText(topic)}
-                  {background ? <Background topic={topic}/> : ""}
+                  <p>
+                    {topic}
+                    {getEmojiFromText(topic)}
+                  </p>
+                  {background ? <Background topic={topic} /> : ""}
                 </Link>
               </li>
             ))}
