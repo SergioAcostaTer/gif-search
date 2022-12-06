@@ -34,6 +34,8 @@ const Details = ({ any }) => {
 
     // console.log(data);
   }, []); //eslint-disable-line
+  console.log(data);
+
   return (
     <>
       <HeaderTag tag={"Post"} />
@@ -51,7 +53,7 @@ const Details = ({ any }) => {
               }
               alt={data?.user?.username ? data?.user?.username : ""}
             />
-            <h4>{data?.title.split("by")[0]}</h4>
+            <h4>{data?.title.split("GIF")[0]}</h4>
           </div>
           <img
             className="post-pic"
