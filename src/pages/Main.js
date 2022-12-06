@@ -27,8 +27,8 @@ const Main = ({ any }) => {
         {/* <Categories /> */}
         {/* <List array={data} /> */}
         <List array={data}>
-          <NavMobile  />
         </List>
+        <NavMobile  />
         {/* <div style={{height: "20vh"}}></div> */}
         
       </div>

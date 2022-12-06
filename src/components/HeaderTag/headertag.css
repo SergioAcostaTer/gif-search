@@ -1,11 +1,11 @@
 .header-tag{
     height: 8vh;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     display: flex;
     align-items: center;
     padding-left: 20px;
     box-shadow: #98989862 0px 1px;
-    border: 1px solid #889397;
+    border-bottom: 1px solid #889397;
 }
 
 .header-title{
@@ -23,6 +23,7 @@
     align-items: center;
     transition: .5s;
     border-radius: 5px;
+    cursor: pointer;
     /* padding: 5px 0; */
 }
 .button-back:active{

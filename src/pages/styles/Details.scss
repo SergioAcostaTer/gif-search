@@ -28,6 +28,8 @@
     .post-pic {
         width: 100%;
         min-height: 200px;
+        max-height: 500px;
+        background-color: rgb(240, 240, 240);
     }
 
     .post-lowbar {
@@ -88,7 +90,7 @@
         height: 80px;
         width: 80px;
         color: rgba(255, 255, 255, 0.904);
-        animation: heartIG .6s;
+        animation: heartIG 1s;
     }
 }
 
@@ -96,22 +98,25 @@
     0% {
         height: 0;
         width: 0;
-        opacity: 1;
     }
 
-    70% {
+    20% {
         height: 80px;
         width: 80px;
-        opacity: 1;
     }
-    90%{
-        height:60px;
+
+    40% {
+        height: 60px;
         width: 60px;
-        opacity: 1;
     }
-    100%{
-        height:60px;
+
+    85% {
+        height: 60px;
         width: 60px;
-        // opacity: 0;
+    }
+
+    100% {
+        height: 0px;
+        width: 0px;
     }
 }

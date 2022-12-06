@@ -39,6 +39,8 @@
 .post .post-pic {
   width: 100%;
   min-height: 200px;
+  max-height: 500px;
+  background-color: #f0f0f0;
 }
 
 .post .post-lowbar {
@@ -110,29 +112,30 @@
   height: 80px;
   width: 80px;
   color: rgba(255, 255, 255, 0.904);
-  -webkit-animation: heartIG .6s;
-          animation: heartIG .6s;
+  -webkit-animation: heartIG 1s;
+          animation: heartIG 1s;
 }
 
 @-webkit-keyframes heartIG {
   0% {
     height: 0;
     width: 0;
-    opacity: 1;
   }
-  70% {
+  20% {
     height: 80px;
     width: 80px;
-    opacity: 1;
   }
-  90% {
+  40% {
     height: 60px;
     width: 60px;
-    opacity: 1;
+  }
+  85% {
+    height: 60px;
+    width: 60px;
   }
   100% {
-    height: 60px;
-    width: 60px;
+    height: 0px;
+    width: 0px;
   }
 }
 
@@ -140,21 +143,22 @@
   0% {
     height: 0;
     width: 0;
-    opacity: 1;
   }
-  70% {
+  20% {
     height: 80px;
     width: 80px;
-    opacity: 1;
   }
-  90% {
+  40% {
     height: 60px;
     width: 60px;
-    opacity: 1;
+  }
+  85% {
+    height: 60px;
+    width: 60px;
   }
   100% {
-    height: 60px;
-    width: 60px;
+    height: 0px;
+    width: 0px;
   }
 }
 /*# sourceMappingURL=Details.css.map */

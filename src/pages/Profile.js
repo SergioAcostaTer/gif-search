@@ -58,7 +58,6 @@ const Profile = ({ any }) => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          height: "100%",
           position: "relative",
         }}
       >

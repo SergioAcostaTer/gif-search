@@ -1,6 +1,5 @@
 .nav-mobile {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 100;
@@ -17,7 +16,7 @@
   height: 65px;
   -webkit-box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
           box-shadow: #1f1f1f11 1.95px 1.95px 2.6px;
-  border-top: 1px solid #889397;
+  border-top: 1px solid #889397ad;
 }
 
 .nav-mobile .nav-mobile-list .nav-mobile-element {

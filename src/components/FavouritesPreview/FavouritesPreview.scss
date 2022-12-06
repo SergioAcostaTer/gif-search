@@ -1,4 +1,5 @@
 .fav-cont {
+    height: 150px;
     filter: brightness(.7);
     display: grid;
     grid-template-columns: repeat(3, minmax(80px, 1fr));
@@ -9,5 +10,16 @@
         object-fit: cover;
         height: 100%;
         width: 100%;
+    }
+}
+
+.loading-div{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 55px;
+        height:55px;
     }
 }

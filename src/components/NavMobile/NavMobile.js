@@ -9,7 +9,7 @@ import hotIcon from "../../sources/fire.svg";
 
 
 import "./NavMobile.css";
-const NavMobile = ({ position = "sticky" }) => {
+const NavMobile = ({ position = "fixed" }) => {
   const path = window.location.pathname
   return (
     <>

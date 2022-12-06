@@ -1,0 +1,13 @@
+@media (min-width: 596px) {
+  .desktop-wrapper {
+    width: 596px;
+  }
+  .desktop-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-mobile {
+    width: 596px;
+  }
+}
