@@ -23,6 +23,7 @@ const FavouritesPreview = ({ token }) => {
                 //   alt={element?.title}
                 // />
                 <Video
+                  key={element?.id}
                   id={element?.id}
                   src={element?.images?.preview?.mp4}
                   alt={element?.title}

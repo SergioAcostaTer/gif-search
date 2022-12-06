@@ -7,6 +7,7 @@ import addGif from "../services/addGif";
 import removeGif from "../services/removeGif";
 import checkFavourite from "../services/checkFavourite";
 import loadingIcon from "../sources/loading.gif";
+import { useDoubleTap } from "use-double-tap";
 
 import "../components/Image/Image.css";
 import "./styles/Details.css";
@@ -15,15 +16,28 @@ import DownloadButton from "../components/DownloadButton/DownloadButton";
 const Details = ({ any }) => {
   const { id } = useParams();
   const [data, setData] = useState();
-  const [heartMode, setHeartMode] = useState(true);
+  const [heartMode, setHeartMode] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [heartAnimation, setHeartAnimation] = useState(false);
   const navigate = useNavigate();
+
+  const bind = useDoubleTap(async (event) => {
+    // console.log(heartMode)
+
+    if(heartMode === false){
+      addGif(localStorage.token, data);
+    }
+
+    setHeartMode(true);
+    setHeartAnimation(true);
+    setTimeout(() => setHeartAnimation(false), 600);
+  });
 
   useEffect(() => {
     window.scroll(0, 0);
     document.title = "easyGif";
     if (!localStorage.user) {
-      // navigate("/login");
+      navigate("/login");
     }
     if (localStorage.token) {
       checkFavourite(localStorage.token, id).then((res) => {
@@ -62,13 +76,40 @@ const Details = ({ any }) => {
             src={data?.images.original.url}
             alt={data?.title}
           /> */}
-          <video disableRemotePlayback autoPlay loop muted className="post-pic">
-            <source
-              src={data?.images?.original?.mp4}
-              alt={data?.title}
-              type="video/mp4"
-            />
-          </video>
+          <div className="video-cont">
+            <video
+              disableRemotePlayback
+              autoPlay
+              loop
+              muted
+              className="post-pic"
+              {...bind}
+            >
+              <source
+                src={data?.images?.original?.mp4}
+                alt={data?.title}
+                type="video/mp4"
+              />
+            </video>
+
+            {heartAnimation ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-heart-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                />
+              </svg>
+            ) : (
+              ""
+            )}
+          </div>
           <div className="post-lowbar">
             {!heartMode ? (
               <>
@@ -122,7 +163,7 @@ const Details = ({ any }) => {
             )}
             <DownloadButton
               url={data?.images?.original?.url}
-              name={data?.title?.split("by")[0]}
+              name={data?.title?.split("GIF")[0]}
               className={"download-details"}
             />
           </div>

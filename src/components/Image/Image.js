@@ -12,7 +12,7 @@ import DownloadButton from "../DownloadButton/DownloadButton";
 import Video from "../Video/Video";
 
 
-const Image = ({ uri, alt, date, save }) => {
+const Image = ({ uri, alt, date, save, options = false }) => {
   const [showOptions, setShowOptions] = useState(false);
   const [copied, setCopied] = useState(false);
   const [heartMode, setHeartMode] = useState(false);
@@ -127,11 +127,11 @@ const Image = ({ uri, alt, date, save }) => {
         )}
 
         <div
-          onClick={() => setShowOptions(!showOptions)}
+          onClick={options ? () => setShowOptions(!showOptions) : ()=>{}}
           /*onMouseOver={() => setShowOptions(true)} onMouseLeave={() => setShowOptions(false)}*/ className="clickable"
         >
     
-          <Video src={uri} alt={alt} className="image"/>
+          <Video src={uri} alt={alt} className="image" onClick={()=>goPost()} />
 
           {showOptions ? (
             <div className="image-options">

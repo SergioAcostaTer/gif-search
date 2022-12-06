@@ -29,7 +29,7 @@ const Main = ({ any }) => {
         <List array={data}>
           <NavMobile  />
         </List>
-        <div style={{height: "20vh"}}></div>
+        {/* <div style={{height: "20vh"}}></div> */}
         
       </div>
     </>
