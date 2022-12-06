@@ -62,7 +62,7 @@ const Details = ({ any }) => {
             src={data?.images.original.url}
             alt={data?.title}
           /> */}
-          <video autoPlay loop muted className="post-pic">
+          <video disableRemotePlayback autoPlay loop muted className="post-pic">
             <source
               src={data?.images?.original?.mp4}
               alt={data?.title}

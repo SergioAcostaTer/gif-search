@@ -34,7 +34,7 @@ const Favourites = ({ any }) => {
             <li key={gif.id}>
               <Link to={`/post/${gif.id}`}>
                 {/* <img src={gif?.images.original.url} alt={gif?.title} /> */}
-                <video autoPlay loop muted className="image">
+                <video disableRemotePlayback autoPlay loop muted className="image">
                   <source
                     src={gif?.images.original.mp4}
                     alt={gif?.title}
