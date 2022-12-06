@@ -1,5 +1,5 @@
 import React from "react";
-import "./Headertag.css";
+import "./headertag.css";
 import { useNavigate } from "react-router-dom";
 import arrowIcon from "../../sources/arrow-left.svg"
 
