@@ -1,7 +1,7 @@
 export default async function sendUser(name, email, picture, verified) {
   const link = encodeURIComponent(picture);
   const res = await fetch(
-    `http://localhost:4000/handleLogin/${name}/${email}/${link}/${verified}`,
+    `https://backend-gif.herokuapp.com/handleLogin/${name}/${email}/${link}/${verified}`,
     {
       method: "POST",
       headers: {

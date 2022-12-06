@@ -20,9 +20,10 @@ const Details = ({ any }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scroll(0, 0);
     document.title = "easyGif";
     if (!localStorage.user) {
-      navigate("/login");
+      // navigate("/login");
     }
     if (localStorage.token) {
       checkFavourite(localStorage.token, id).then((res) => {
