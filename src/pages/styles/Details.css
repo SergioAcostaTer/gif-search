@@ -46,7 +46,8 @@
 .post .post-lowbar {
   height: 50px;
   padding: 0 15px;
-  border: 1px solid #889397a2;
+  border-bottom: 1px solid #889397a2;
+  border-top: 1px solid #889397a2;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;

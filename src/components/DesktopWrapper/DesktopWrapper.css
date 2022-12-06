@@ -10,4 +10,10 @@
   .nav-mobile {
     width: 596px;
   }
+  .autocompleted-list{
+    width: 596px;
+  }
+  .autocompleted-list li{
+    list-style: none;
+  }
 }

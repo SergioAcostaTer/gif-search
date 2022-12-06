@@ -12,7 +12,7 @@ const Search = ({ any }) => {
   const query = params.get("query") || "panda";
 
   useEffect(() => {
-    document.title = 'Search Gif🔎🖼️';
+    document.title = "Search Gif🔎🖼️";
   }, []);
 
   useEffect(() => {
@@ -36,9 +36,8 @@ const Search = ({ any }) => {
       {/* <HeaderTag tag={"Search"}/> */}
       <div className="search">
         <SearchBar />
-        <List array={data}>
-          <NavMobile />
-        </List>
+        <List array={data} />
+        <NavMobile />
       </div>
     </>
   );
