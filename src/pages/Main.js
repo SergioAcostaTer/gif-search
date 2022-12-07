@@ -15,13 +15,15 @@ const Main = ({ any }) => {
   }, []);
 
   window.onscroll = () => {
-    console.log(window.pageYOffset, document.documentElement.scrollHeight - 975 )
+    // console.log(window.pageYOffset + window.innerHeight, document.documentElement.scrollHeight )
 
-    if (window.pageYOffset > document.documentElement.scrollHeight - 976) {
+    if (
+      window.pageYOffset + window.innerHeight ===
+      document.documentElement.scrollHeight
+    ) {
       setRe(!re);
     }
   };
-
   useEffect(() => {
     getTrending(5, offset).then((data) => {
       if (offset === 0) {
@@ -31,7 +33,7 @@ const Main = ({ any }) => {
       }
       setOffset(offset + 5);
       // console.log(datas ? datas : "", offset);
-      console.log(data, offset);
+      // console.log(data, offset);
     });
   }, [re]); //eslint-disable-line
 

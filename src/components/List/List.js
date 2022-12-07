@@ -9,7 +9,7 @@ const List = ({ array = [] }) => {
   // console.log(array)
   return (
     <>
-      <div className="list">
+      <div className="list" id="list">
         {array.map((gif) => (
           <Image
             save={gif}
