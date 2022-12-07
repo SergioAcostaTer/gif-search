@@ -15,7 +15,7 @@ const Main = ({ any }) => {
   }, []);
 
   window.onscroll = () => {
-    // console.log(window.pageYOffset, document.documentElement.scrollHeight - 975 )
+    console.log(window.pageYOffset, document.documentElement.scrollHeight - 975 )
 
     if (window.pageYOffset > document.documentElement.scrollHeight - 976) {
       setRe(!re);
