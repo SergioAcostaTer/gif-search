@@ -15,12 +15,16 @@ const Main = ({ any }) => {
   }, []);
 
   window.onscroll = () => {
-    // console.log(window.pageYOffset + window.innerHeight, document.documentElement.scrollHeight )
+    // console.log(
+    //   parseInt(window.pageYOffset + window.innerHeight),
+    //   parseInt(document.documentElement.scrollHeight)
+    // );
 
     if (
-      window.pageYOffset + window.innerHeight ===
-      document.documentElement.scrollHeight
+      parseInt(window.pageYOffset + window.innerHeight) >=
+      parseInt(document.documentElement.scrollHeight - 1)
     ) {
+      console.log("push");
       setRe(!re);
     }
   };

@@ -4,7 +4,7 @@ import ButtonProfile from "../components/ButtonProfile/ButtonProfile";
 import HeaderTag from "../components/HeaderTag/HeaderTag";
 import forbiddenIcon from "../sources/forbidden.svg";
 import starIcon from "../sources/star.svg";
-import bookmarkIcon from "../sources/bookmark.svg";
+// import bookmarkIcon from "../sources/bookmark.svg";
 
 import GlobalContext from "../context/GlobalContext";
 import NavMobile from "../components/NavMobile/NavMobile";
@@ -19,7 +19,6 @@ const Profile = ({ any }) => {
   }, []);
 
   const { user } = useContext(GlobalContext);
-  // console.log(user);
 
   const navigate = useNavigate();
 
@@ -41,9 +40,9 @@ const Profile = ({ any }) => {
   const favourites = () => {
     navigate("/favourites");
   };
-  const saved = () => {
-    navigate("/saved");
-  };
+  // const saved = () => {
+  //   navigate("/saved");
+  // };
 
   return (
     <>
@@ -62,7 +61,7 @@ const Profile = ({ any }) => {
         }}
       >
         <div>
-        <ButtonProfile
+          <ButtonProfile
             text={"Favourites"}
             img={starIcon}
             className={"favs"}
@@ -70,12 +69,12 @@ const Profile = ({ any }) => {
           />
           <FavouritesPreview token={localStorage.token} />
         </div>
-        <ButtonProfile
+        {/* <ButtonProfile
           text={"Saved GIFs"}
           img={bookmarkIcon}
           className={"saved"}
           func={saved}
-        />
+        /> */}
         <ButtonProfile
           text={"Log out of the account"}
           img={forbiddenIcon}

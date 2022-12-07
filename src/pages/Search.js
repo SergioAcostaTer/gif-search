@@ -21,7 +21,7 @@ const Search = ({ any }) => {
 
   window.onscroll = () => {
     if (
-      window.pageYOffset + window.innerHeight ===
+      window.pageYOffset + window.innerHeight >=
       document.documentElement.scrollHeight
     ) {
       setRe(!re);
