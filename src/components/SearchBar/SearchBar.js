@@ -56,6 +56,7 @@ const SearchBar = ({ displayInfo }) => {
         <form onSubmit={handleSubmit} className="form">
           <div className="input-container">
             <input
+            id="input"
               onFocus={() => {
                 setShowAuto(true);
                 setToggleSearch(false);
