@@ -36,7 +36,7 @@ const Search = ({ any }) => {
       }
       setOffset(offset + 5);
       // console.log(datas ? datas : "", offset);
-      console.log(data, offset);
+      // console.log(data, offset);
     });
   }, [re]); //eslint-disable-line
 

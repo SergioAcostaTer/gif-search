@@ -1,5 +1,7 @@
+import {API} from "./keys"
+
 export default async function addGif(token, object) {
-    const res = await fetch(`https://backend-gif.herokuapp.com/removegif/${token}`, {
+    const res = await fetch(`${API}/removegif/${token}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

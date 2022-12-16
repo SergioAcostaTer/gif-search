@@ -1,7 +1,9 @@
+import {API} from "./keys"
+
 export default async function sendUser(name, email, picture, verified) {
   const link = encodeURIComponent(picture);
   const res = await fetch(
-    `https://backend-gif.herokuapp.com/handleLogin/${name}/${email}/${link}/${verified}`,
+    `${API}/handleLogin/${name}/${email}/${link}/${verified}`,
     {
       method: "POST",
       headers: {
